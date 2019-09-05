@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+#include <vector>
 int main() {
     const int NUM_ELEMENTS = 8;   // Number of elements
     int revVctr[8];               // User values
@@ -13,7 +13,7 @@ int main() {
     }
 
     // Reverse
-    for (i = 1; i <= NUM_ELEMENTS; ++i) {
+    for (i = 1; i <= NUM_ELEMENTS/2; ++i) {
         temp = revVctr[i - 1];
         revVctr[i-1] = revVctr[NUM_ELEMENTS - i];// Swap
         revVctr[NUM_ELEMENTS - i] = temp;
