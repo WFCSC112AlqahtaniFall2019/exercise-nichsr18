@@ -3,9 +3,9 @@ using namespace std;
 
 int main() {
     const int NUM_ELEMENTS = 8;   // Number of elements
-    int revVctr[8]; // User values
-    int newVctr[8];//New Array
+    int revVctr[8];               // User values
     int i;                        // Loop index
+    int temp;
 
     cout << "Enter " << NUM_ELEMENTS << " integer values..." << endl;
     for (i = 0; i < NUM_ELEMENTS; ++i) {
@@ -14,7 +14,9 @@ int main() {
 
     // Reverse
     for (i = 1; i <= NUM_ELEMENTS; ++i) {
-        newVctr[i] = revVctr[NUM_ELEMENTS - i]; // Swap
+        temp = revVctr[i - 1];
+        revVctr[i-1] = revVctr[NUM_ELEMENTS - i];// Swap
+        revVctr[NUM_ELEMENTS - i] = temp;
     }
 
     // Print values
